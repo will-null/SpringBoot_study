@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title></title>
+
+    <link th:href="@{/css/signIn/signIn.css}" type="text/css" rel="stylesheet" media="all">
+
+    <script  src="http://www.189.cn/dqmh/static/js/jquery/dq-jq.js"></script>
+	<script src="/js/all.js"></script>
+
+    <link href="//fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300i,700" rel="stylesheet">
+    <link href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic'
+          rel='stylesheet' type='text/css'>
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" rel="stylesheet"
+          media="all">
+    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+</head>
+<body>
+<div class="agileits-banner">
+    <div class="banner-w3text w3layouts">
+        <h2>Welcome To <span>Invent</span></h2>
+        <div class="wthree-bnr-login">
+
+            <form th:action="@{/user/signIn}" method="post">
+                <ul>
+                    <li><input type="text" name="name" placeholder="请填写1" required=""></li>
+                    <li><input type="text" name="passWord" placeholder="请填写1" required=""></li>
+                    <li><input type="submit" value="SIGN IN"></li>
+                    <!--错误提示-->
+                    <li><p style="color: red" th:text="${msg}" th:if="${not #strings.isEmpty(msg)}"></li>
+                </ul>
+            </form>
+
+        </div>
+        <h6>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit</h6>
+    </div>
+	<div class="banner-bottom w3-agileits-bnr-btm">
+		<div class="col-sm-6 col-xs-6 bnr-btm-left">
+			<h5>Lorem ipsum </h5>
+			<p>Duis aute irure dolor in reprehenderit</p>
+		</div>
+		<div class="col-sm-6 col-xs-6 bnr-btm-right">
+			<h5>Reprehen</h5>
+			<p>Voluptate velit esse cillum dolore eu</p>
+		</div>
+		<div class="clearfix"> </div>
+	</div>
+</div>
+</body>
+</html>
