@@ -1,2 +1,8 @@
-# Java-springBoot
-springBoot的学习代码
+
+约定大于配置
+
+组件自动装配      @Enable**** 自动配置****
+
+嵌入式web容器
+
+
