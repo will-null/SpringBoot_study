@@ -1,0 +1,34 @@
+server:
+  #端口号
+  port: 8787
+
+spring:
+  thymeleaf:
+    #关闭thymeleaf的缓存
+    cache: false
+    mode: HTML
+
+  profiles:
+    #active: mysql,redis
+    include: redis
+
+  redis:
+    host: 192.168.199.20
+    port: 6379
+    database: 1
+    lettuce:
+      pool:
+        min-idle: 0
+        max-wait: -1
+        max-idle: 8
+        max-active: 8
+    timeout: 0
+
+#日志
+logging:
+  # level: debug
+  #日志路径
+  file:
+    name: log/myLog.log
+
+

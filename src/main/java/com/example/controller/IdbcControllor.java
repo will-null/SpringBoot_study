@@ -1,7 +1,7 @@
 package com.example.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jdbc.core.JdbcTemplate;
+
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -11,7 +11,7 @@ import java.util.Map;
 @RestController
 public class IdbcControllor {
 
-    @Autowired
+  /*  @Autowired
     JdbcTemplate jdbcTemplate;
 
     @ResponseBody
@@ -21,5 +21,5 @@ public class IdbcControllor {
         System.out.println(list.toString());
         return list;
     }
-
+*/
 }
