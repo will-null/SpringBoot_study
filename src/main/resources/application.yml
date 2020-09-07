@@ -3,14 +3,17 @@ server:
   port: 8787
 
 spring:
+  #数据库的配置
+  datasource:
+    password: root
+    username: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/mybatis_p?useUnicode=true&characterEncoding=UTF-8&useSSL=true&serverTimezone=UTC
+
   thymeleaf:
     #关闭thymeleaf的缓存
     cache: false
     mode: HTML
-
-  profiles:
-    #active: mysql,redis
-    include: redis
 
   redis:
     host: 192.168.199.20
