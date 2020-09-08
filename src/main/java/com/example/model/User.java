@@ -1,34 +1,22 @@
 package com.example.model;
 
-import org.springframework.context.annotation.Primary;
+import lombok.Data;
 
-@Primary
-public class User {
+import java.io.Serializable;
+import java.util.Date;
 
-    private String name;
-    private String passWord;
+//一定要序列化
+@Data
+public class User implements Serializable {
 
-    public String getName() {
-        return name;
-    }
+    private String id;
+    private String username;
+    private Date   birthday;
+    private String sex;
+    private String address;
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getPassWord() {
-        return passWord;
-    }
-
-    public void setPassWord(String passWord) {
-        this.passWord = passWord;
-    }
-
-    public User(String name, String passWord) {
-        this.name = name;
-        this.passWord = passWord;
-    }
-
-    public User() {
+    public User(String username, String sex) {
+        this.username = username;
+        this.sex = sex;
     }
 }

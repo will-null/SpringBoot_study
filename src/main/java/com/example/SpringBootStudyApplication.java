@@ -1,11 +1,13 @@
 package com.example;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 
 //项目要写到跟他同级的目录下com.example;
 @SpringBootApplication
+@MapperScan("com.example.mapper")
 public class SpringBootStudyApplication {
 	//程序的主入口
 	public static void main(String[] args) {

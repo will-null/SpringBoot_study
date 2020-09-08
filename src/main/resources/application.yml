@@ -1,14 +1,14 @@
 server:
   #端口号
-  port: 8787
+  port: 8789
 
 spring:
   #数据库的配置
   datasource:
     password: root
     username: root
+    url: jdbc:mysql://localhost:3306/springboot?useUnicode=true&characterEncoding=UTF-8&useSSL=true&serverTimezone=UTC
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/mybatis_p?useUnicode=true&characterEncoding=UTF-8&useSSL=true&serverTimezone=UTC
 
   thymeleaf:
     #关闭thymeleaf的缓存
@@ -27,6 +27,10 @@ spring:
         max-active: 8
     timeout: 0
 
+
+
+
+
 #日志
 logging:
   # level: debug
@@ -34,4 +38,5 @@ logging:
   file:
     name: log/myLog.log
 
-
+# mybatis:
+#   mapper-locations: classpath*:/mapper/*.xml
