@@ -6,5 +6,5 @@ import org.springframework.stereotype.Service;
 @Service
 public interface UserService {
     //根据id查用户信息
-    User findById();
+    User findById(String id) throws Exception;
 }
